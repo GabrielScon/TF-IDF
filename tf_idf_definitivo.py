@@ -140,9 +140,9 @@ V = 0
 for v in TFIDF:
   g = V
   while g < len(TFIDF):
-    distancia = num.dot(v,TFIDF[g])/(num.linalg.norm(v)*num.linalg.norm(TFIDF[g]))
-    MD[V][g] = distancia
-    MD[g][V] = distancia
+    D = num.dot(v,TFIDF[g])/(num.linalg.norm(v)*num.linalg.norm(TFIDF[g]))
+    MD[V][g] = D
+    MD[g][V] = D
     V += 1
     g += 1
 
